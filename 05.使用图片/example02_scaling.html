@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>canvas_scaling示例</title>
+</head>
+
+<body onload="draw();">
+  <canvas id="canvas" width="300" height="150"></canvas>
+  <script type="application/javascript">
+    function draw() {
+      var ctx = document.getElementById('canvas').getContext('2d');
+      var img = new Image();
+      img.onload = function () {
+        for (var i = 0; i < 4; i++) {
+          for (var j = 0; j < 3; j++) {
+            ctx.drawImage(img, j * 50, i * 38, 50, 38);
+          }
+        }
+      };
+      img.src = 'https://mdn.mozillademos.org/files/5397/rhino.jpg';
+    }
+  </script>
+</body>
+
+</html>
