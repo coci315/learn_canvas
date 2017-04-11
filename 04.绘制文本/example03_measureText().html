@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>canvas_measureText()示例</title>
+</head>
+
+<body onload="draw();">
+  <canvas id="canvas" width="150" height="150"></canvas>
+  <script type="application/javascript">
+    function draw() {
+      var ctx = document.getElementById('canvas').getContext('2d');
+      var text = ctx.measureText("foo"); // TextMetrics object
+      console.log(text.width); // 16;
+    }
+  </script>
+</body>
+
+</html>
